@@ -7,7 +7,6 @@
 
 import Foundation
 
-@MainActor
 public class FeedViewModel: ObservableObject {
     
     let feedLoader: FeedLoader
@@ -19,7 +18,7 @@ public class FeedViewModel: ObservableObject {
     @Published var items: [FeedListItemViewModel] = []
     private var pages: [FeedPage] = []
     
-    func loadFeed() async {
+    @MainActor func loadFeed() async {
         do {
             let feedPage = try await feedLoader.load(limit: 10, offset: 0)
             pages = pages.filter { $0.offset != $0.offset } + [feedPage]
