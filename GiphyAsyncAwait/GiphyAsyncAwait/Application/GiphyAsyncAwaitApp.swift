@@ -11,7 +11,12 @@ import SwiftUI
 struct GiphyAsyncAwaitApp: App {
     var body: some Scene {
         WindowGroup {
-            FeedView()
+            let appConfiguration = AppConfiguration()
+            let networkConfigurable = ApiNetworkConfig(baseURL: URL(string: appConfiguration.baseURL)!, headers: [:], queryParameters: ["api_key": appConfiguration.apiKey, "rating": "g"])
+            let httpClient = URLSessionHTTPClient(networkConfigurable: networkConfigurable)
+            let remoteFeedLoader = RemoteFeedLoader(httpClient: httpClient)
+            let feedViewModel = FeedViewModel(feedLoader: remoteFeedLoader)
+            FeedView(viewModel: feedViewModel)
         }
     }
 }

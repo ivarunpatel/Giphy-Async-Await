@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct FeedView: View {
+    @ObservedObject private(set) public var viewModel: FeedViewModel
+    
+    init(viewModel: FeedViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\(viewModel.items.count)").task {
+            await viewModel.loadFeed()
+        }
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedView()
-    }
-}
+//struct FeedView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FeedView(viewModel: <#FeedViewModel#>)
+//    }
+//}

@@ -26,6 +26,8 @@
 		8B8344FF2A0CEBC700F90A1A /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344FE2A0CEBC700F90A1A /* FeedResponse.swift */; };
 		8B8345012A0CEC5D00F90A1A /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345002A0CEC5D00F90A1A /* HTTPClientError.swift */; };
 		8B8345032A0CECD100F90A1A /* FeedResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345022A0CECD100F90A1A /* FeedResponseMapper.swift */; };
+		8B8345052A0CFCF900F90A1A /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345042A0CFCF900F90A1A /* FeedViewModel.swift */; };
+		8B8345092A0D033E00F90A1A /* FeedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345082A0D033E00F90A1A /* FeedListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		8B8344FE2A0CEBC700F90A1A /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
 		8B8345002A0CEC5D00F90A1A /* HTTPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		8B8345022A0CECD100F90A1A /* FeedResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponseMapper.swift; sourceTree = "<group>"; };
+		8B8345042A0CFCF900F90A1A /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		8B8345082A0D033E00F90A1A /* FeedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 		8B8344E82A0CE27000F90A1A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8B8345042A0CFCF900F90A1A /* FeedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				8B8344EA2A0CE28D00F90A1A /* FeedView.swift */,
+				8B8345062A0D032B00F90A1A /* FeedList */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +241,22 @@
 				8B8345022A0CECD100F90A1A /* FeedResponseMapper.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		8B8345062A0D032B00F90A1A /* FeedList */ = {
+			isa = PBXGroup;
+			children = (
+				8B8345072A0D033400F90A1A /* ViewModel */,
+			);
+			path = FeedList;
+			sourceTree = "<group>";
+		};
+		8B8345072A0D033400F90A1A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B8345082A0D033E00F90A1A /* FeedListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +394,7 @@
 				8B8344EB2A0CE28D00F90A1A /* FeedView.swift in Sources */,
 				8B8345012A0CEC5D00F90A1A /* HTTPClientError.swift in Sources */,
 				8B8344E32A0CE0C500F90A1A /* AppConfiguration.swift in Sources */,
+				8B8345052A0CFCF900F90A1A /* FeedViewModel.swift in Sources */,
 				8B8344FF2A0CEBC700F90A1A /* FeedResponse.swift in Sources */,
 				8B8344F52A0CE74600F90A1A /* Endpoint.swift in Sources */,
 				8B8344E72A0CE26400F90A1A /* FeedModel.swift in Sources */,
@@ -380,6 +403,7 @@
 				8B8344EF2A0CE39E00F90A1A /* FeedLoader.swift in Sources */,
 				8B8344F12A0CE41000F90A1A /* RemoteFeedLoader.swift in Sources */,
 				8B8344B72A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift in Sources */,
+				8B8345092A0D033E00F90A1A /* FeedListViewModel.swift in Sources */,
 				8B8344FC2A0CEA7C00F90A1A /* FeedEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
