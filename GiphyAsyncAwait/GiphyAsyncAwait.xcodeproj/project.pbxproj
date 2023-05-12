@@ -28,6 +28,9 @@
 		8B8345032A0CECD100F90A1A /* FeedResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345022A0CECD100F90A1A /* FeedResponseMapper.swift */; };
 		8B8345052A0CFCF900F90A1A /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345042A0CFCF900F90A1A /* FeedViewModel.swift */; };
 		8B8345092A0D033E00F90A1A /* FeedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345082A0D033E00F90A1A /* FeedListViewModel.swift */; };
+		8BFCD15E2A0DFF0C0026E49A /* FeedListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFCD15D2A0DFF0C0026E49A /* FeedListItemView.swift */; };
+		8BFCD1612A0E2C8D0026E49A /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8BFCD1602A0E2C8D0026E49A /* FLAnimatedImage */; };
+		8BFCD1642A0E2D370026E49A /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFCD1632A0E2D370026E49A /* GIFView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,8 @@
 		8B8345022A0CECD100F90A1A /* FeedResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponseMapper.swift; sourceTree = "<group>"; };
 		8B8345042A0CFCF900F90A1A /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		8B8345082A0D033E00F90A1A /* FeedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewModel.swift; sourceTree = "<group>"; };
+		8BFCD15D2A0DFF0C0026E49A /* FeedListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListItemView.swift; sourceTree = "<group>"; };
+		8BFCD1632A0E2D370026E49A /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BFCD1612A0E2C8D0026E49A /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,11 +129,12 @@
 		8B8344B52A0CDF7500F90A1A /* GiphyAsyncAwait */ = {
 			isa = PBXGroup;
 			children = (
-				8B8344FA2A0CEA0500F90A1A /* Network */,
-				8B8344ED2A0CE39000F90A1A /* Feature */,
-				8B8344EC2A0CE35900F90A1A /* API */,
 				8B8344E12A0CE08D00F90A1A /* Application */,
 				8B8344E42A0CE24800F90A1A /* Feed */,
+				8B8344ED2A0CE39000F90A1A /* Feature */,
+				8B8344EC2A0CE35900F90A1A /* API */,
+				8BFCD1622A0E2D1F0026E49A /* Utlis */,
+				8B8344FA2A0CEA0500F90A1A /* Network */,
 				8B8344E02A0CE07A00F90A1A /* Info.plist */,
 				8B8344BA2A0CDF7700F90A1A /* Assets.xcassets */,
 				8B8344BC2A0CDF7700F90A1A /* Preview Content */,
@@ -246,6 +253,7 @@
 		8B8345062A0D032B00F90A1A /* FeedList */ = {
 			isa = PBXGroup;
 			children = (
+				8BFCD15C2A0DFEF10026E49A /* View */,
 				8B8345072A0D033400F90A1A /* ViewModel */,
 			);
 			path = FeedList;
@@ -257,6 +265,22 @@
 				8B8345082A0D033E00F90A1A /* FeedListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8BFCD15C2A0DFEF10026E49A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BFCD15D2A0DFF0C0026E49A /* FeedListItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8BFCD1622A0E2D1F0026E49A /* Utlis */ = {
+			isa = PBXGroup;
+			children = (
+				8BFCD1632A0E2D370026E49A /* GIFView.swift */,
+			);
+			path = Utlis;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +299,9 @@
 			dependencies = (
 			);
 			name = GiphyAsyncAwait;
+			packageProductDependencies = (
+				8BFCD1602A0E2C8D0026E49A /* FLAnimatedImage */,
+			);
 			productName = GiphyAsyncAwait;
 			productReference = 8B8344B32A0CDF7500F90A1A /* GiphyAsyncAwait.app */;
 			productType = "com.apple.product-type.application";
@@ -347,6 +374,9 @@
 				Base,
 			);
 			mainGroup = 8B8344AA2A0CDF7500F90A1A;
+			packageReferences = (
+				8BFCD15F2A0E2C8D0026E49A /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+			);
 			productRefGroup = 8B8344B42A0CDF7500F90A1A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -400,7 +430,9 @@
 				8B8344E72A0CE26400F90A1A /* FeedModel.swift in Sources */,
 				8B8344F32A0CE44100F90A1A /* HTTPClient.swift in Sources */,
 				8B8345032A0CECD100F90A1A /* FeedResponseMapper.swift in Sources */,
+				8BFCD15E2A0DFF0C0026E49A /* FeedListItemView.swift in Sources */,
 				8B8344EF2A0CE39E00F90A1A /* FeedLoader.swift in Sources */,
+				8BFCD1642A0E2D370026E49A /* GIFView.swift in Sources */,
 				8B8344F12A0CE41000F90A1A /* RemoteFeedLoader.swift in Sources */,
 				8B8344B72A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift in Sources */,
 				8B8345092A0D033E00F90A1A /* FeedListViewModel.swift in Sources */,
@@ -735,6 +767,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8BFCD15F2A0E2C8D0026E49A /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BFCD1602A0E2C8D0026E49A /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BFCD15F2A0E2C8D0026E49A /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B8344AB2A0CDF7500F90A1A /* Project object */;
 }
