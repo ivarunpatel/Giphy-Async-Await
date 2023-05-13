@@ -1,4 +1,4 @@
-# Giphy-Async-Await
+# Giphy-Async-Await-SwiftUI
 Demo project using SwiftUI with Async Await.
 
 ## Concepts Covered
