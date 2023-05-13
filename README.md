@@ -9,4 +9,4 @@ Demo project using SwiftUI with Async Await.
 * Reusable network layer with Async/Await
 * Pagination support with LazyVStack
 
-![https://media.giphy.com/media/qu2VVrRZ4EKIuRrMTM/giphy.gif]()
+![](https://media.giphy.com/media/qu2VVrRZ4EKIuRrMTM/giphy.gif)
