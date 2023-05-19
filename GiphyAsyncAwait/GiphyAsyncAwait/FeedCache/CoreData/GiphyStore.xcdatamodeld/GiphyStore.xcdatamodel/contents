@@ -8,7 +8,7 @@
         <attribute name="originalImageWidth" attributeType="String"/>
         <attribute name="smallImageHeight" attributeType="String"/>
         <attribute name="smallImageUrl" attributeType="URI"/>
-        <attribute name="smallImageWIdth" attributeType="String"/>
+        <attribute name="smallImageWidth" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
         <attribute name="userDisplayName" optional="YES" attributeType="String"/>
         <attribute name="userName" optional="YES" attributeType="String"/>
@@ -18,6 +18,6 @@
         <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="offset" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="totalCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="giphy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDFeedItem" inverseName="page" inverseEntity="CDFeedItem"/>
+        <relationship name="giphy" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDFeedItem" inverseName="page" inverseEntity="CDFeedItem"/>
     </entity>
 </model>

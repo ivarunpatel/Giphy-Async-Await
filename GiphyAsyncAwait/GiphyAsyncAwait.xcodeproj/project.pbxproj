@@ -13,6 +13,9 @@
 		8B1DACDF2A17734C0063C091 /* GiphyStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACDD2A17734C0063C091 /* GiphyStore.xcdatamodeld */; };
 		8B1DACED2A177B270063C091 /* CDFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACE92A177B270063C091 /* CDFeedItem.swift */; };
 		8B1DACEF2A177B280063C091 /* CDFeedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACEB2A177B270063C091 /* CDFeedPage.swift */; };
+		8B1DACF12A178AA10063C091 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACF02A178AA10063C091 /* CoreDataHelpers.swift */; };
+		8B1DACF32A179F600063C091 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACF22A179F600063C091 /* FeedLoaderWithFallbackComposite.swift */; };
+		8B1DACF52A179F8F0063C091 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACF42A179F8F0063C091 /* LocalFeedLoader.swift */; };
 		8B8344B72A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344B62A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift */; };
 		8B8344BB2A0CDF7700F90A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8344BA2A0CDF7700F90A1A /* Assets.xcassets */; };
 		8B8344BE2A0CDF7700F90A1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8344BD2A0CDF7700F90A1A /* Preview Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		8B1DACDE2A17734C0063C091 /* GiphyStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GiphyStore.xcdatamodel; sourceTree = "<group>"; };
 		8B1DACE92A177B270063C091 /* CDFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFeedItem.swift; sourceTree = "<group>"; };
 		8B1DACEB2A177B270063C091 /* CDFeedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFeedPage.swift; sourceTree = "<group>"; };
+		8B1DACF02A178AA10063C091 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
+		8B1DACF22A179F600063C091 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
+		8B1DACF42A179F8F0063C091 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		8B8344B32A0CDF7500F90A1A /* GiphyAsyncAwait.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphyAsyncAwait.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8344B62A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyAsyncAwaitApp.swift; sourceTree = "<group>"; };
 		8B8344BA2A0CDF7700F90A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 				8B1DACDC2A17730C0063C091 /* CoreData */,
 				8B1DACD62A176CF00063C091 /* FeedStore.swift */,
 				8B1DACD82A1771970063C091 /* LocalFeedModel.swift */,
+				8B1DACF42A179F8F0063C091 /* LocalFeedLoader.swift */,
 			);
 			path = FeedCache;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 				8B1DACE92A177B270063C091 /* CDFeedItem.swift */,
 				8B1DACEB2A177B270063C091 /* CDFeedPage.swift */,
 				8B1DACDD2A17734C0063C091 /* GiphyStore.xcdatamodeld */,
+				8B1DACF02A178AA10063C091 /* CoreDataHelpers.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 			children = (
 				8B8344E22A0CE0C500F90A1A /* AppConfiguration.swift */,
 				8B8344B62A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift */,
+				8B1DACF22A179F600063C091 /* FeedLoaderWithFallbackComposite.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -473,6 +482,9 @@
 				8B8344EF2A0CE39E00F90A1A /* FeedLoader.swift in Sources */,
 				8BFCD1642A0E2D370026E49A /* GIFView.swift in Sources */,
 				8B1DACD92A1771970063C091 /* LocalFeedModel.swift in Sources */,
+				8B1DACF32A179F600063C091 /* FeedLoaderWithFallbackComposite.swift in Sources */,
+				8B1DACF52A179F8F0063C091 /* LocalFeedLoader.swift in Sources */,
+				8B1DACF12A178AA10063C091 /* CoreDataHelpers.swift in Sources */,
 				8B8344F12A0CE41000F90A1A /* RemoteFeedLoader.swift in Sources */,
 				8B8344B72A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift in Sources */,
 				8B8345092A0D033E00F90A1A /* FeedListViewModel.swift in Sources */,
