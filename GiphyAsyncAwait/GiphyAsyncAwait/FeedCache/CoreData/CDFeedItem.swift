@@ -18,9 +18,27 @@ public class CDFeedItem: NSManagedObject {
     @NSManaged public var originalImageWidth: String?
     @NSManaged public var originalImageHeight: String?
     @NSManaged public var smallImageUrl: URL?
-    @NSManaged public var smallImageWIdth: String?
+    @NSManaged public var smallImageWidth: String?
     @NSManaged public var smallImageHeight: String?
     @NSManaged public var userName: String?
     @NSManaged public var userDisplayName: String?
-    @NSManaged public var page: CDFeedPage?
+    @NSManaged public var page: CDFeedPage
+    
+    static func feedItems(from localFeed: [LocalFeed], in context: NSManagedObjectContext) -> NSOrderedSet {
+        return NSOrderedSet(array: localFeed.map { local in
+            let feedItem = CDFeedItem(context: context)
+            feedItem.id = local.id
+            feedItem.title = local.title
+            feedItem.dateTime = local.datetime
+            feedItem.originalImageUrl = local.images.original.url
+            feedItem.originalImageWidth = local.images.original.width
+            feedItem.originalImageHeight = local.images.original.height
+            feedItem.smallImageUrl = local.images.small.url
+            feedItem.smallImageWidth = local.images.small.width
+            feedItem.smallImageHeight = local.images.small.height
+            feedItem.userName = local.user?.username
+            feedItem.userDisplayName = local.user?.displayName
+            return feedItem
+        })
+    }
 }

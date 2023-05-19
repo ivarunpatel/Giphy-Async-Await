@@ -14,5 +14,5 @@ public class CDFeedPage: NSManagedObject {
     @NSManaged public var totalCount: Int16
     @NSManaged public var count: Int16
     @NSManaged public var offset: Int16
-    @NSManaged public var giphy: NSSet?
+    @NSManaged public var giphy: NSOrderedSet
 }
