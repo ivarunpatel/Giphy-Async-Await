@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B1DACD72A176CF00063C091 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACD62A176CF00063C091 /* FeedStore.swift */; };
+		8B1DACD92A1771970063C091 /* LocalFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACD82A1771970063C091 /* LocalFeedModel.swift */; };
+		8B1DACDB2A1772F50063C091 /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACDA2A1772F50063C091 /* CoreDataFeedStore.swift */; };
+		8B1DACDF2A17734C0063C091 /* GiphyStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACDD2A17734C0063C091 /* GiphyStore.xcdatamodeld */; };
+		8B1DACED2A177B270063C091 /* CDFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACE92A177B270063C091 /* CDFeedItem.swift */; };
+		8B1DACEF2A177B280063C091 /* CDFeedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACEB2A177B270063C091 /* CDFeedPage.swift */; };
 		8B8344B72A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344B62A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift */; };
 		8B8344BB2A0CDF7700F90A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8344BA2A0CDF7700F90A1A /* Assets.xcassets */; };
 		8B8344BE2A0CDF7700F90A1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8344BD2A0CDF7700F90A1A /* Preview Assets.xcassets */; };
@@ -51,6 +57,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B1DACD62A176CF00063C091 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
+		8B1DACD82A1771970063C091 /* LocalFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedModel.swift; sourceTree = "<group>"; };
+		8B1DACDA2A1772F50063C091 /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
+		8B1DACDE2A17734C0063C091 /* GiphyStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GiphyStore.xcdatamodel; sourceTree = "<group>"; };
+		8B1DACE92A177B270063C091 /* CDFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFeedItem.swift; sourceTree = "<group>"; };
+		8B1DACEB2A177B270063C091 /* CDFeedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFeedPage.swift; sourceTree = "<group>"; };
 		8B8344B32A0CDF7500F90A1A /* GiphyAsyncAwait.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphyAsyncAwait.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8344B62A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyAsyncAwaitApp.swift; sourceTree = "<group>"; };
 		8B8344BA2A0CDF7700F90A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +118,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B1DACD52A1765FC0063C091 /* FeedCache */ = {
+			isa = PBXGroup;
+			children = (
+				8B1DACDC2A17730C0063C091 /* CoreData */,
+				8B1DACD62A176CF00063C091 /* FeedStore.swift */,
+				8B1DACD82A1771970063C091 /* LocalFeedModel.swift */,
+			);
+			path = FeedCache;
+			sourceTree = "<group>";
+		};
+		8B1DACDC2A17730C0063C091 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8B1DACDA2A1772F50063C091 /* CoreDataFeedStore.swift */,
+				8B1DACE92A177B270063C091 /* CDFeedItem.swift */,
+				8B1DACEB2A177B270063C091 /* CDFeedPage.swift */,
+				8B1DACDD2A17734C0063C091 /* GiphyStore.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		8B8344AA2A0CDF7500F90A1A = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +162,7 @@
 		8B8344B52A0CDF7500F90A1A /* GiphyAsyncAwait */ = {
 			isa = PBXGroup;
 			children = (
+				8B1DACD52A1765FC0063C091 /* FeedCache */,
 				8B8344E12A0CE08D00F90A1A /* Application */,
 				8B8344E42A0CE24800F90A1A /* Feed */,
 				8B8344ED2A0CE39000F90A1A /* Feature */,
@@ -422,17 +456,23 @@
 				8B8344F72A0CE78700F90A1A /* NetworkConfigurable.swift in Sources */,
 				8B8344F92A0CE85B00F90A1A /* URLSessionHTTPClient.swift in Sources */,
 				8B8344EB2A0CE28D00F90A1A /* FeedView.swift in Sources */,
+				8B1DACED2A177B270063C091 /* CDFeedItem.swift in Sources */,
 				8B8345012A0CEC5D00F90A1A /* HTTPClientError.swift in Sources */,
 				8B8344E32A0CE0C500F90A1A /* AppConfiguration.swift in Sources */,
 				8B8345052A0CFCF900F90A1A /* FeedViewModel.swift in Sources */,
+				8B1DACDB2A1772F50063C091 /* CoreDataFeedStore.swift in Sources */,
+				8B1DACDF2A17734C0063C091 /* GiphyStore.xcdatamodeld in Sources */,
+				8B1DACD72A176CF00063C091 /* FeedStore.swift in Sources */,
 				8B8344FF2A0CEBC700F90A1A /* FeedResponse.swift in Sources */,
 				8B8344F52A0CE74600F90A1A /* Endpoint.swift in Sources */,
 				8B8344E72A0CE26400F90A1A /* FeedModel.swift in Sources */,
+				8B1DACEF2A177B280063C091 /* CDFeedPage.swift in Sources */,
 				8B8344F32A0CE44100F90A1A /* HTTPClient.swift in Sources */,
 				8B8345032A0CECD100F90A1A /* FeedResponseMapper.swift in Sources */,
 				8BFCD15E2A0DFF0C0026E49A /* FeedListItemView.swift in Sources */,
 				8B8344EF2A0CE39E00F90A1A /* FeedLoader.swift in Sources */,
 				8BFCD1642A0E2D370026E49A /* GIFView.swift in Sources */,
+				8B1DACD92A1771970063C091 /* LocalFeedModel.swift in Sources */,
 				8B8344F12A0CE41000F90A1A /* RemoteFeedLoader.swift in Sources */,
 				8B8344B72A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift in Sources */,
 				8B8345092A0D033E00F90A1A /* FeedListViewModel.swift in Sources */,
@@ -788,6 +828,19 @@
 			productName = FLAnimatedImage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		8B1DACDD2A17734C0063C091 /* GiphyStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B1DACDE2A17734C0063C091 /* GiphyStore.xcdatamodel */,
+			);
+			currentVersion = 8B1DACDE2A17734C0063C091 /* GiphyStore.xcdatamodel */;
+			path = GiphyStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8B8344AB2A0CDF7500F90A1A /* Project object */;
 }
