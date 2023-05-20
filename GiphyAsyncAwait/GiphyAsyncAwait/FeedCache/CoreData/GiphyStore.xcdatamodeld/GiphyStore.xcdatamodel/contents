@@ -12,7 +12,7 @@
         <attribute name="title" attributeType="String"/>
         <attribute name="userDisplayName" optional="YES" attributeType="String"/>
         <attribute name="userName" optional="YES" attributeType="String"/>
-        <relationship name="page" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFeedPage" inverseName="giphy" inverseEntity="CDFeedPage"/>
+        <relationship name="page" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CDFeedPage" inverseName="giphy" inverseEntity="CDFeedPage"/>
     </entity>
     <entity name="CDFeedPage" representedClassName="CDFeedPage" syncable="YES">
         <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>

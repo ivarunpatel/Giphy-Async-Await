@@ -18,10 +18,17 @@ public class CDFeedPage: NSManagedObject {
 }
 
 extension CDFeedPage {
-    static func find(in context: NSManagedObjectContext) throws -> CDFeedPage? {
+    static func find(with offset: Int, in context: NSManagedObjectContext) throws -> CDFeedPage? {
         let request = NSFetchRequest<CDFeedPage>(entityName: entity().name!)
+        request.predicate = NSPredicate(format: "offset == %d", offset)
         request.returnsObjectsAsFaults = false
         return try context.fetch(request).first
+    }
+    
+    static func delete(in context: NSManagedObjectContext) throws {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entity().name!)
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
+        try context.execute(deleteRequest)
     }
     
     var toLocal: [LocalFeed] {
