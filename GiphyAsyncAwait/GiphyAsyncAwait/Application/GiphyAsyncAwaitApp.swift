@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct GiphyAsyncAwaitApp: App {
@@ -15,7 +16,11 @@ struct GiphyAsyncAwaitApp: App {
             let networkConfigurable = ApiNetworkConfig(baseURL: URL(string: appConfiguration.baseURL)!, headers: [:], queryParameters: ["api_key": appConfiguration.apiKey, "rating": "g"])
             let httpClient = URLSessionHTTPClient(networkConfigurable: networkConfigurable)
             let remoteFeedLoader = RemoteFeedLoader(httpClient: httpClient)
-            let feedViewModel = FeedViewModel(feedLoader: remoteFeedLoader)
+            let coreDataStore = try! CoreDataFeedStore(storeURL: NSPersistentContainer.defaultDirectoryURL().appending(path: "giphy-store.sqlite"))
+            let localFeedLoader = LocalFeedLoader(store: coreDataStore)
+            let feedLoaderCache = FeedLoaderCacheDecorator(decoratee: remoteFeedLoader, cache: localFeedLoader)
+            let fallbackLoader = FeedLoaderWithFallbackComposite(primary: feedLoaderCache, fallback: localFeedLoader)
+            let feedViewModel = FeedViewModel(feedLoader: fallbackLoader)
             FeedView(viewModel: feedViewModel)
         }
     }
