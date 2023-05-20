@@ -8,5 +8,7 @@
 import Foundation
 
 public protocol FeedStore {
-    func save(feed: LocalFeedPage) async throws
+    func insert(feed: LocalFeedPage) async throws
+    func retrieveCache() async throws -> LocalFeedPage?
+    func deleteCache() async throws
 }

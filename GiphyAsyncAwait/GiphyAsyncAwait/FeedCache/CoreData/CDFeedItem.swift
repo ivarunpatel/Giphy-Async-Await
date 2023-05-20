@@ -11,15 +11,15 @@ import CoreData
 
 @objc(CDFeedItem)
 public class CDFeedItem: NSManagedObject {
-    @NSManaged public var id: String?
-    @NSManaged public var title: String?
+    @NSManaged public var id: String
+    @NSManaged public var title: String
     @NSManaged public var dateTime: String?
-    @NSManaged public var originalImageUrl: URL?
-    @NSManaged public var originalImageWidth: String?
-    @NSManaged public var originalImageHeight: String?
-    @NSManaged public var smallImageUrl: URL?
-    @NSManaged public var smallImageWidth: String?
-    @NSManaged public var smallImageHeight: String?
+    @NSManaged public var originalImageUrl: URL
+    @NSManaged public var originalImageWidth: String
+    @NSManaged public var originalImageHeight: String
+    @NSManaged public var smallImageUrl: URL
+    @NSManaged public var smallImageWidth: String
+    @NSManaged public var smallImageHeight: String
     @NSManaged public var userName: String?
     @NSManaged public var userDisplayName: String?
     @NSManaged public var page: CDFeedPage
@@ -40,5 +40,9 @@ public class CDFeedItem: NSManagedObject {
             feedItem.userDisplayName = local.user?.displayName
             return feedItem
         })
+    }
+    
+    var local: LocalFeed {
+        LocalFeed(id: id, title: title, datetime: dateTime, images: LocalFeedImages(original: LocalFeedImageMetadata(height: originalImageHeight, width: originalImageWidth, url: originalImageUrl), small: LocalFeedImageMetadata(height: smallImageHeight, width: smallImageWidth, url: smallImageUrl)), user: LocalFeedUser(username: userName ?? "", displayName: userDisplayName ?? ""))
     }
 }

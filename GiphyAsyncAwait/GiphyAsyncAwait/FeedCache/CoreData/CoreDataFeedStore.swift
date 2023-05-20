@@ -18,14 +18,28 @@ public final class CoreDataFeedStore: FeedStore {
         context = container.newBackgroundContext()
     }
     
-    public func save(feed: LocalFeedPage) async throws {
+    public func insert(feed: LocalFeedPage) async throws {
         try await context.perform { [context] in
             let cdFeedPageContext = CDFeedPage(context: context)
             cdFeedPageContext.totalCount = Int16(feed.totalCount)
             cdFeedPageContext.count = Int16(feed.count)
-            cdFeedPageContext.totalCount = Int16(feed.offset)
+            cdFeedPageContext.totalCount = Int16(feed.totalCount)
             cdFeedPageContext.giphy =  CDFeedItem.feedItems(from: feed.giphy, in: context)
             try context.save()
+        }
+    }
+    
+    public func retrieveCache() async throws -> LocalFeedPage? {
+        try await context.perform { [context] in
+            try CDFeedPage.find(in: context).map { feedPage in
+                LocalFeedPage(totalCount: Int(feedPage.totalCount), count: Int(feedPage.count), offset: Int(feedPage.offset), giphy: feedPage.toLocal)
+            }
+        }
+    }
+    
+    public func deleteCache() async throws {
+        try await context.perform { [context] in
+            try CDFeedPage.find(in: context).map(context.delete).map(context.save)
         }
     }
 }

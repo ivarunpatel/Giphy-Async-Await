@@ -68,3 +68,33 @@ public struct LocalFeedPage: Equatable {
         self.giphy = giphy
     }
 }
+
+extension LocalFeedPage {
+    func toDomain() -> FeedPage {
+        FeedPage(totalCount: totalCount, count: count, offset: offset, giphy: giphy.map { $0.toDomain() })
+    }
+}
+
+extension LocalFeed {
+    func toDomain() -> Feed {
+        Feed(id: id, title: title, datetime: datetime, images: images.toDomain(), user: user?.toDomain())
+    }
+}
+
+extension LocalFeedImages {
+    func toDomain() -> FeedImages {
+        FeedImages(original: original.toDomain(), small: small.toDomain())
+    }
+}
+
+extension LocalFeedImageMetadata {
+    func toDomain() -> FeedImageMetadata {
+        FeedImageMetadata(height: height, width: width, url: url)
+    }
+}
+
+extension LocalFeedUser {
+    func toDomain() -> FeedUser {
+        FeedUser(username: username, displayName: displayName)
+    }
+}
