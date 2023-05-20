@@ -9,6 +9,6 @@ import Foundation
 
 public protocol FeedStore {
     func insert(feed: LocalFeedPage) async throws
-    func retrieveCache() async throws -> LocalFeedPage?
+    func retrieveCache(offset: Int) async throws -> LocalFeedPage?
     func deleteCache() async throws
 }

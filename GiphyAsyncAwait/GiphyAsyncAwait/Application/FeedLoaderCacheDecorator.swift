@@ -20,6 +20,9 @@ public final class FeedLoaderCacheDecorator: FeedLoader {
         var feedPage: FeedPage
         do {
             feedPage = try await decoratee.load(limit: limit, offset: offset)
+            if offset == 0 {
+                try await cache.deleteCachedFeed()
+            }
             try await cache.save(feedPage)
         } catch {
             throw error

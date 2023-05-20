@@ -23,11 +23,15 @@ extension LocalFeedLoader: FeedCache {
     func save(_ feed: FeedPage) async throws {
         try await store.insert(feed: feed.toLocal())
     }
+    
+    func deleteCachedFeed() async throws {
+        try await store.deleteCache()
+    }
 }
 
 extension LocalFeedLoader: FeedLoader {
     func load(limit: Int, offset: Int) async throws -> FeedPage {
-        let cache = try await store.retrieveCache()
+        let cache = try await store.retrieveCache(offset: offset)
         if let cache = cache {
             return cache.toDomain()
         } else {
