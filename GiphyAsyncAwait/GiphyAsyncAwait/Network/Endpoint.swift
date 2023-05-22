@@ -18,7 +18,7 @@ public protocol Requestable {
     var path: String { get }
     var isFullPath: Bool { get }
     var method: HTTPMethodType { get }
-    var queryParameters: [String : Any] { get }
+    var queryParameters: [String: Any] { get }
     
     func urlRequest(with config: NetworkConfigurable) throws -> URLRequest
 }
@@ -28,7 +28,7 @@ public enum RequestGenerationError: Error {
 }
 extension Requestable {
     func url(with config: NetworkConfigurable) throws -> URL {
-        let baseURL = isFullPath ? path :  config.baseURL.appending(path: path).absoluteString
+        let baseURL = isFullPath ? path : config.baseURL.appending(path: path).absoluteString
         
         guard var urlComponents = URLComponents(string: baseURL) else {
             throw RequestGenerationError.components

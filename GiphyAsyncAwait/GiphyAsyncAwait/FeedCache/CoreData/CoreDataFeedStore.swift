@@ -24,7 +24,7 @@ public final class CoreDataFeedStore: FeedStore {
             cdFeedPageContext.totalCount = Int16(feed.totalCount)
             cdFeedPageContext.count = Int16(feed.count)
             cdFeedPageContext.offset = Int16(feed.offset)
-            cdFeedPageContext.giphy =  CDFeedItem.feedItems(from: feed.giphy, in: context)
+            cdFeedPageContext.giphy = CDFeedItem.feedItems(from: feed.giphy, in: context)
             try context.save()
         }
     }
