@@ -16,6 +16,7 @@
 		8B1DACF12A178AA10063C091 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACF02A178AA10063C091 /* CoreDataHelpers.swift */; };
 		8B1DACF32A179F600063C091 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACF22A179F600063C091 /* FeedLoaderWithFallbackComposite.swift */; };
 		8B1DACF52A179F8F0063C091 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACF42A179F8F0063C091 /* LocalFeedLoader.swift */; };
+		8B35575C2A1B897600AC0263 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8B35575B2A1B897600AC0263 /* .swiftlint.yml */; };
 		8B8344B72A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344B62A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift */; };
 		8B8344BB2A0CDF7700F90A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8344BA2A0CDF7700F90A1A /* Assets.xcassets */; };
 		8B8344BE2A0CDF7700F90A1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8344BD2A0CDF7700F90A1A /* Preview Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		8B1DACF02A178AA10063C091 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		8B1DACF22A179F600063C091 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		8B1DACF42A179F8F0063C091 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
+		8B35575B2A1B897600AC0263 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		8B8344B32A0CDF7500F90A1A /* GiphyAsyncAwait.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphyAsyncAwait.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8344B62A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyAsyncAwaitApp.swift; sourceTree = "<group>"; };
 		8B8344BA2A0CDF7700F90A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		8B8344B52A0CDF7500F90A1A /* GiphyAsyncAwait */ = {
 			isa = PBXGroup;
 			children = (
+				8B35575B2A1B897600AC0263 /* .swiftlint.yml */,
 				8B1DACD52A1765FC0063C091 /* FeedCache */,
 				8B8344E12A0CE08D00F90A1A /* Application */,
 				8B8344E42A0CE24800F90A1A /* Feed */,
@@ -342,6 +345,7 @@
 				8B8344AF2A0CDF7500F90A1A /* Sources */,
 				8B8344B02A0CDF7500F90A1A /* Frameworks */,
 				8B8344B12A0CDF7500F90A1A /* Resources */,
+				8B35574E2A1B834800AC0263 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -442,6 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B35575C2A1B897600AC0263 /* .swiftlint.yml in Resources */,
 				8B8344BE2A0CDF7700F90A1A /* Preview Assets.xcassets in Resources */,
 				8B8344BB2A0CDF7700F90A1A /* Assets.xcassets in Resources */,
 			);
@@ -462,6 +467,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B35574E2A1B834800AC0263 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B8344AF2A0CDF7500F90A1A /* Sources */ = {

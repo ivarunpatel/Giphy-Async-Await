@@ -41,9 +41,7 @@ public class FeedViewModel: ObservableObject {
     }
     private var pages: [FeedPage] = []
     
-    
     @MainActor private func loadFeed(state: FeedViewModelState) async {
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first)
         self.state = state
         do {
             let feedPage = try await feedLoader.load(limit: parPageItem, offset: nextPage)

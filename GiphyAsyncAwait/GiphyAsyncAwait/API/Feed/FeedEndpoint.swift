@@ -11,5 +11,5 @@ struct FeedEndpoint: Requestable {
     var path: String = "/v1/gifs/trending"
     var isFullPath: Bool = false
     var method: HTTPMethodType = .get
-    var queryParameters: [String : Any] = [:]
+    var queryParameters: [String: Any] = [:]
 }
