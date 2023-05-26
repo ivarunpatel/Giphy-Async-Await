@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NetFlow
 
 final class RemoteFeedLoader: FeedLoader {
     private let httpClient: HTTPClient

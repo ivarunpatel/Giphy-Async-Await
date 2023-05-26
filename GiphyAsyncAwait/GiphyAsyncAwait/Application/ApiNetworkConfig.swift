@@ -1,17 +1,12 @@
 //
-//  NetworkConfigurable.swift
+//  ApiNetworkConfig.swift
 //  GiphyAsyncAwait
 //
-//  Created by Varun on 11/05/23.
+//  Created by Varun on 26/05/23.
 //
 
 import Foundation
-
-public protocol NetworkConfigurable {
-    var baseURL: URL { get }
-    var headers: [String: String] { get }
-    var queryParameters: [String: String] { get }
-}
+import NetFlow
 
 public struct ApiNetworkConfig: NetworkConfigurable {
     public let baseURL: URL

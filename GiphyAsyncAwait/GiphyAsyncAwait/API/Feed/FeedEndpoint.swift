@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NetFlow
 
 struct FeedEndpoint: Requestable {
     var path: String = "/v1/gifs/trending"

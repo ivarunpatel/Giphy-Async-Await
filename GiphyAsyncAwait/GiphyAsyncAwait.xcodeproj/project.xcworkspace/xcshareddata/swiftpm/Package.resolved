@@ -8,6 +8,15 @@
         "revision" : "d4f07b6f164d53c1212c3e54d6460738b1981e9f",
         "version" : "1.0.17"
       }
+    },
+    {
+      "identity" : "netflow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ivarunpatel/NetFlow",
+      "state" : {
+        "revision" : "ebbd8a050d96cff687d0f44a56c50477b92efb25",
+        "version" : "1.0.2"
+      }
     }
   ],
   "version" : 2

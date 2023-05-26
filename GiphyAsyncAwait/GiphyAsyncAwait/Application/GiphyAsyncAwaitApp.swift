@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import NetFlow
 
 @main
 struct GiphyAsyncAwaitApp: App {

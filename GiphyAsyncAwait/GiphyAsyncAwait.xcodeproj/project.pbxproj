@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B09A1E12A20D03200DF044C /* NetFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 8B09A1E02A20D03200DF044C /* NetFlow */; };
+		8B09A1E32A20D05000DF044C /* ApiNetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B09A1E22A20D05000DF044C /* ApiNetworkConfig.swift */; };
 		8B1DACD72A176CF00063C091 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACD62A176CF00063C091 /* FeedStore.swift */; };
 		8B1DACD92A1771970063C091 /* LocalFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACD82A1771970063C091 /* LocalFeedModel.swift */; };
 		8B1DACDB2A1772F50063C091 /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DACDA2A1772F50063C091 /* CoreDataFeedStore.swift */; };
@@ -28,13 +30,8 @@
 		8B8344EB2A0CE28D00F90A1A /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344EA2A0CE28D00F90A1A /* FeedView.swift */; };
 		8B8344EF2A0CE39E00F90A1A /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344EE2A0CE39E00F90A1A /* FeedLoader.swift */; };
 		8B8344F12A0CE41000F90A1A /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344F02A0CE41000F90A1A /* RemoteFeedLoader.swift */; };
-		8B8344F32A0CE44100F90A1A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344F22A0CE44100F90A1A /* HTTPClient.swift */; };
-		8B8344F52A0CE74600F90A1A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344F42A0CE74600F90A1A /* Endpoint.swift */; };
-		8B8344F72A0CE78700F90A1A /* NetworkConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344F62A0CE78700F90A1A /* NetworkConfigurable.swift */; };
-		8B8344F92A0CE85B00F90A1A /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344F82A0CE85B00F90A1A /* URLSessionHTTPClient.swift */; };
 		8B8344FC2A0CEA7C00F90A1A /* FeedEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344FB2A0CEA7C00F90A1A /* FeedEndpoint.swift */; };
 		8B8344FF2A0CEBC700F90A1A /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8344FE2A0CEBC700F90A1A /* FeedResponse.swift */; };
-		8B8345012A0CEC5D00F90A1A /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345002A0CEC5D00F90A1A /* HTTPClientError.swift */; };
 		8B8345032A0CECD100F90A1A /* FeedResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345022A0CECD100F90A1A /* FeedResponseMapper.swift */; };
 		8B8345052A0CFCF900F90A1A /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345042A0CFCF900F90A1A /* FeedViewModel.swift */; };
 		8B8345092A0D033E00F90A1A /* FeedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8345082A0D033E00F90A1A /* FeedListViewModel.swift */; };
@@ -63,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B09A1E22A20D05000DF044C /* ApiNetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiNetworkConfig.swift; sourceTree = "<group>"; };
 		8B1DACD62A176CF00063C091 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		8B1DACD82A1771970063C091 /* LocalFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedModel.swift; sourceTree = "<group>"; };
 		8B1DACDA2A1772F50063C091 /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
@@ -88,13 +86,8 @@
 		8B8344EA2A0CE28D00F90A1A /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		8B8344EE2A0CE39E00F90A1A /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 		8B8344F02A0CE41000F90A1A /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
-		8B8344F22A0CE44100F90A1A /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		8B8344F42A0CE74600F90A1A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		8B8344F62A0CE78700F90A1A /* NetworkConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurable.swift; sourceTree = "<group>"; };
-		8B8344F82A0CE85B00F90A1A /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		8B8344FB2A0CEA7C00F90A1A /* FeedEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEndpoint.swift; sourceTree = "<group>"; };
 		8B8344FE2A0CEBC700F90A1A /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
-		8B8345002A0CEC5D00F90A1A /* HTTPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		8B8345022A0CECD100F90A1A /* FeedResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponseMapper.swift; sourceTree = "<group>"; };
 		8B8345042A0CFCF900F90A1A /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		8B8345082A0D033E00F90A1A /* FeedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewModel.swift; sourceTree = "<group>"; };
@@ -109,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B09A1E12A20D03200DF044C /* NetFlow in Frameworks */,
 				8BFCD1612A0E2C8D0026E49A /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,7 +177,6 @@
 				8B8344ED2A0CE39000F90A1A /* Feature */,
 				8B8344E42A0CE24800F90A1A /* Feed */,
 				8BFCD1622A0E2D1F0026E49A /* Utlis */,
-				8B8344FA2A0CEA0500F90A1A /* Network */,
 				8B8344E02A0CE07A00F90A1A /* Info.plist */,
 				8B8344BA2A0CDF7700F90A1A /* Assets.xcassets */,
 				8B8344BC2A0CDF7700F90A1A /* Preview Content */,
@@ -223,6 +216,7 @@
 				8B8344B62A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift */,
 				8B1DACF22A179F600063C091 /* FeedLoaderWithFallbackComposite.swift */,
 				8BEE05472A18B0160040AB31 /* FeedLoaderCacheDecorator.swift */,
+				8B09A1E22A20D05000DF044C /* ApiNetworkConfig.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -277,18 +271,6 @@
 				8BEE05452A18AFD10040AB31 /* FeedCache.swift */,
 			);
 			path = Feature;
-			sourceTree = "<group>";
-		};
-		8B8344FA2A0CEA0500F90A1A /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				8B8344F22A0CE44100F90A1A /* HTTPClient.swift */,
-				8B8344F82A0CE85B00F90A1A /* URLSessionHTTPClient.swift */,
-				8B8344F42A0CE74600F90A1A /* Endpoint.swift */,
-				8B8344F62A0CE78700F90A1A /* NetworkConfigurable.swift */,
-				8B8345002A0CEC5D00F90A1A /* HTTPClientError.swift */,
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		8B8344FD2A0CEB6400F90A1A /* Feed */ = {
@@ -354,6 +336,7 @@
 			name = GiphyAsyncAwait;
 			packageProductDependencies = (
 				8BFCD1602A0E2C8D0026E49A /* FLAnimatedImage */,
+				8B09A1E02A20D03200DF044C /* NetFlow */,
 			);
 			productName = GiphyAsyncAwait;
 			productReference = 8B8344B32A0CDF7500F90A1A /* GiphyAsyncAwait.app */;
@@ -429,6 +412,7 @@
 			mainGroup = 8B8344AA2A0CDF7500F90A1A;
 			packageReferences = (
 				8BFCD15F2A0E2C8D0026E49A /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+				8B09A1DF2A20D03200DF044C /* XCRemoteSwiftPackageReference "NetFlow" */,
 			);
 			productRefGroup = 8B8344B42A0CDF7500F90A1A /* Products */;
 			projectDirPath = "";
@@ -494,21 +478,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B8344F72A0CE78700F90A1A /* NetworkConfigurable.swift in Sources */,
-				8B8344F92A0CE85B00F90A1A /* URLSessionHTTPClient.swift in Sources */,
 				8B8344EB2A0CE28D00F90A1A /* FeedView.swift in Sources */,
 				8B1DACED2A177B270063C091 /* CDFeedItem.swift in Sources */,
-				8B8345012A0CEC5D00F90A1A /* HTTPClientError.swift in Sources */,
 				8B8344E32A0CE0C500F90A1A /* AppConfiguration.swift in Sources */,
 				8B8345052A0CFCF900F90A1A /* FeedViewModel.swift in Sources */,
 				8B1DACDB2A1772F50063C091 /* CoreDataFeedStore.swift in Sources */,
 				8B1DACDF2A17734C0063C091 /* GiphyStore.xcdatamodeld in Sources */,
 				8B1DACD72A176CF00063C091 /* FeedStore.swift in Sources */,
 				8B8344FF2A0CEBC700F90A1A /* FeedResponse.swift in Sources */,
-				8B8344F52A0CE74600F90A1A /* Endpoint.swift in Sources */,
 				8B8344E72A0CE26400F90A1A /* FeedModel.swift in Sources */,
 				8B1DACEF2A177B280063C091 /* CDFeedPage.swift in Sources */,
-				8B8344F32A0CE44100F90A1A /* HTTPClient.swift in Sources */,
 				8B8345032A0CECD100F90A1A /* FeedResponseMapper.swift in Sources */,
 				8BFCD15E2A0DFF0C0026E49A /* FeedListItemView.swift in Sources */,
 				8B8344EF2A0CE39E00F90A1A /* FeedLoader.swift in Sources */,
@@ -519,6 +498,7 @@
 				8B1DACF52A179F8F0063C091 /* LocalFeedLoader.swift in Sources */,
 				8B1DACF12A178AA10063C091 /* CoreDataHelpers.swift in Sources */,
 				8B8344F12A0CE41000F90A1A /* RemoteFeedLoader.swift in Sources */,
+				8B09A1E32A20D05000DF044C /* ApiNetworkConfig.swift in Sources */,
 				8B8344B72A0CDF7500F90A1A /* GiphyAsyncAwaitApp.swift in Sources */,
 				8B8345092A0D033E00F90A1A /* FeedListViewModel.swift in Sources */,
 				8BEE05482A18B0160040AB31 /* FeedLoaderCacheDecorator.swift in Sources */,
@@ -857,6 +837,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8B09A1DF2A20D03200DF044C /* XCRemoteSwiftPackageReference "NetFlow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivarunpatel/NetFlow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		8BFCD15F2A0E2C8D0026E49A /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
@@ -868,6 +856,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8B09A1E02A20D03200DF044C /* NetFlow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B09A1DF2A20D03200DF044C /* XCRemoteSwiftPackageReference "NetFlow" */;
+			productName = NetFlow;
+		};
 		8BFCD1602A0E2C8D0026E49A /* FLAnimatedImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8BFCD15F2A0E2C8D0026E49A /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;

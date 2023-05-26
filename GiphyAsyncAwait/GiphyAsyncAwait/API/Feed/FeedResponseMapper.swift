@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NetFlow
 
 struct FeedResponseMapper {
     static func map(data: Data) throws -> FeedPage {
