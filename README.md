@@ -14,3 +14,7 @@ Demo project using SwiftUI with Async Await.
 * Pagination support with LazyVStack
 
 ![](https://media.giphy.com/media/qu2VVrRZ4EKIuRrMTM/giphy.gif)
+
+## Diagram
+
+![](https://github.com/ivarunpatel/Giphy-Async-Await-SwiftUI/blob/10a9f32618398c1cc44a155b8162808c73ae6560/GiphyAsyncAwait/Diagram.jpg)
